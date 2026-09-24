@@ -38,10 +38,10 @@ int main(void){
 	do{
 		printf("Escribe el PIN: \n");
 		char read[20];
-		scanf("%19s", read);
+		fgets(read, sizeof(read), stdin);
 		int pin[4];
 
-		if(strlen(read) != 4){
+		if(strlen(read) != 5){
 			printf("El PIN debe contener 4 dígitos");
 			continue;
 		}
